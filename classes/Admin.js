@@ -20,11 +20,15 @@ class Factuur {
 
 // Klant Klasse
 class Klant {
-  constructor(id, naam, email) {
+  constructor(id, naam, email, factuurnummer, bedrag, factuur2, factuur1) {
     this.id = id;
     this.naam = naam;
     this.email = email;
     this.facturen = [];
+    this.factuurnummer = factuurnummer;
+    this.bedrag = bedrag;
+    this.factuur1 = factuur1;
+    this.factuur2 = factuur2;
   }
 
   voegFactuurToe(factuur) {
@@ -44,8 +48,17 @@ class Klant {
   getTotaalBedragOpenstaand() {
     // bereken het totaal van de facturen die nog niet betaald zijn.
   }
+
+  printFacturen() {
+    console.log(
+      this.facturen.forEach(
+        `Facturen voor ${this.naam}: \n ${this.factuur1}\n ${this.factuur2}`
+      )
+    );
+  }
 }
 
 module.exports = {
   Factuur,
+  Klant,
 };
