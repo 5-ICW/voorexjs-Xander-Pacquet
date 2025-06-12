@@ -47,8 +47,9 @@ class Klant {
 
   getTotaalBedragOpenstaand() {
     // bereken het totaal van de facturen die nog niet betaald zijn.
+    this.facturen.bedrag - this.facturen.bedrag;
   }
-
+  //moet met twee foreachen maar niet genoeg tijd.
   printFacturen() {
     console.log(
       this.facturen.forEach(
