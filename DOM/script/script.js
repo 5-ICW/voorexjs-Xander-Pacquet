@@ -45,15 +45,19 @@ function klantToevoegen() {
 }
 klantToevoegen();
 
-// klanten.forEach(() => {
-//   const factuurBetaaldKlant = document.createElement("p");
-//   factuurBetaaldKlant.value = facturenData;
-//   factuurBetaaldKlant.innerText = facturenData.true;
-//   betaaldContainer.appendChild(factuurBetaaldKlant);
-// });
+klantSelect.addEventListener("change", () => {
+  klanten.forEach(() => {
+    const factuurBetaaldKlant = document.createElement("p");
+    factuurBetaaldKlant.value = facturenData.true;
+    factuurBetaaldKlant.innerText = facturenData.true;
+    betaaldContainer.appendChild(factuurBetaaldKlant);
+  });
+});
 
 klantSelect.addEventListener("change", () => {
-  if (facturenData.some((id) => id == true)) {
-    console.log(facturenData.true);
-  }
+  klanten.forEach(() => {
+    if ((facturenData = true)) {
+      console.log(facturenData.true);
+    } else console.log(facturenData.false);
+  });
 });
